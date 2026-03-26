@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and model weights (large files)
+task1/data
+task2/data/raw/
+task2/data/embeddings/
+*.npy
+*.npz
+*.pt
+*.pth
+*.csv
+
+# Conda / virtualenv
+.env
+env/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# other
+.gitkeep

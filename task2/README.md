@@ -19,7 +19,7 @@ Four datasets were downloaded programmatically from the OpenOrganelle S3 bucket:
 python task1_data_acquisition/download.py --all-mito --scale s3 --slices 10
 ```
 
-See [task1_data_acquisition/task1.md](task1_data_acquisition/task1.md) for full results and visualizations.
+See [task1_data_acquisition/README.md](task1_data_acquisition/README.md) for full results and visualizations.
 
 ---
 
@@ -33,7 +33,7 @@ At scale s3, mitochondria span roughly 5–11 px (estimated from the median inst
 
 DINOv3 produces one embedding per patch, giving a coarse grid. The patch grid is **bilinearly upsampled** to the full image resolution, yielding a dense `(H, W, 768)` embedding field. 
 
-See [task2_dino_embeddings/task2.md](task2_dino_embeddings/task2.md) for PCA visualizations and implementation details.
+See [task2_dino_embeddings/README.md](task2_dino_embeddings/README.md) for PCA visualizations and implementation details.
 
 ---
 
@@ -53,7 +53,7 @@ The kidney query vector applied directly to a liver slice still highlights mitoc
 
 With N query mitochondria, all query vectors are averaged into a single pooled vector before computing the similarity map. This suppresses instance-specific noise and retains only the shared structural signature. In practice, the pooled result is not substantially better than a single query, possibly due to variability in the selected instances. A potential improvement is to compute a separate similarity map for each query and select the best scoring one, which is more computationally intensive but better handles morphological diversity within the query set. This can be further visualized by comparing the individual similarity maps across queries, which reveals the variability and consistency of the retrieved regions.
 
-See [task3_retrieval/task3.md](task3_retrieval/task3.md) for all similarity maps and score distributions.
+See [task3_retrieval/README.md](task3_retrieval/README.md) for all similarity maps and score distributions.
 
 ---
 
@@ -70,7 +70,7 @@ Four approaches are proposed, ordered by parameter count:
 
 The linear probe is a useful diagnostic for feature quality. The upsampling decoder is the practical strong baseline for automatic segmentation. Fine-tuning SAM enables interactive instance-level segmentation with minimal retraining, though it requires a prompt at inference time.
 
-See [task4_proposal/task4.md](task4_proposal/task4.md) for the full technical outline.
+See [task4_proposal/README.md](task4_proposal/README.md) for the full technical outline.
 
 ## Reproduction
 

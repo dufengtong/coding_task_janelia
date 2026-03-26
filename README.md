@@ -17,3 +17,8 @@ See [task1/answer.md](task1/answer.md) for the full answer.
 Implementation covering data acquisition, DINOv3 feature extraction, embedding-based retrieval, and a fine-tuning proposal.
 
 See [task2/README.md](task2/README.md) for setup instructions and answers to all sub-tasks.
+
+
+## LLM Usage
+
+Claude Code were used to assist with code structuring, debugging, and writing markdown files. All core ideas, model design, and analysis were developed and verified by the author.

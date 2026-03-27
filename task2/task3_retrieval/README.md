@@ -120,4 +120,4 @@ The pooled vector is L2-normalised before computing the similarity map, as befor
 
 Multi-query cross-dataset retrieval yields similar mito and background score distributions between the two datasets.
 
-The result is not substantially better than a single query instance, possibly due to the quality of the selected mitochondria. One possible improvement is to compute the similarity map for each query mitochondrion individually and select the best match. This approach is more computationally intensive but can capture the morphological variety within the query set for better retrieval.
+The result is not substantially better than a single query instance, possibly due to the quality of the selected mitochondria. One possible improvement is to compute the similarity map for each query mitochondrion individually and select the best match. This approach is more computationally intensive but can capture the feature variety within the query set for better retrieval.

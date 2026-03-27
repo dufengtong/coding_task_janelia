@@ -57,7 +57,7 @@ Below I outline four approaches, ordered from near-zero to moderate parameter co
 - Loss: Dice + binary cross-entropy
 - Optimiser: Adam, lr ~1e-4
 - Data: same annotated slices as Approach 2, backbone fully frozen
-- The decoder is small enough to train on a few hundred slices without overfitting
+- The decoder is small enough to train on a few hundred slices.
 
 **Advantage over Approach 2:** Learns spatial upsampling filters rather than a flat linear classifier, recovering membrane-level boundary precision. 
 
@@ -75,10 +75,12 @@ Below I outline four approaches, ordered from near-zero to moderate parameter co
 **Training:**
 - Loss: focal loss + Dice loss on predicted masks
 - Optimiser: AdamW, lr ~1e-5, backbone frozen
-- Data: ground-truth instance masks from OpenOrganelle; a few hundred annotated slices should be sufficient given the small number of trainable parameters
-- At inference: a single click or box on a mitochondrion produces a segmentation mask
+- Data: ground-truth instance masks from OpenOrganelle; a few hundred annotated slices might be sufficient given the small number of trainable parameters
+- At inference: a point or box prompt can be used to segment individual mitochondria instances. 
 
-**Advantage:** SAM's decoder is already optimised for promptable, instance-level segmentation. Fine-tuning it on EM data adapts the domain while preserving the general segmentation capability. The limitation is that SAM requires a prompt at inference time, meaning a separate model is still needed to localise mitochondria before SAM can segment them.
+**Advantage:** SAM's decoder is already optimised for promptable, instance-level segmentation. Fine-tuning it on EM data adapts the domain while preserving the general segmentation capability.
+
+**Limitation:** SAM requires prompts at inference time, meaning a separate model is still needed to localise mitochondria before SAM can segment them.
 
 ---
 
@@ -91,4 +93,4 @@ Below I outline four approaches, ordered from near-zero to moderate parameter co
 | 3. Upsampling decoder | ~800K | Moderate (~500 slices) | Binary mask |
 | 4. Fine-tune SAM | ~4M (decoder only) | Moderate (~500 slices) | Promptable instance masks |
 
-In general, there is a trade-off between parameter counts and the ability to model fine boundaries and richer structures. Approach 2 is a useful diagnostic for feature quality from the frozen backbone. Approach 3 is a practical strong baseline for automatic segmentation; Approach 4 is the most flexible, enabling interactive instance-level segmentation with minimal retraining.
+In general, there is a trade-off between parameter counts and the ability to model fine boundaries and richer structures. Approach 2 is a useful diagnostic for feature quality from the frozen backbone. Approach 3 is a practical strong baseline for automatic segmentation; Approach 4 is quite flexible, enabling interactive instance-level segmentation with minimal retraining but would need prompts at the inference time.

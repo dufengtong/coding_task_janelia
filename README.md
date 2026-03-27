@@ -21,4 +21,4 @@ See [task2/README.md](task2/README.md) for setup instructions and answers to all
 
 ## LLM Usage
 
-Claude Code were used to assist with code structuring, debugging, and writing markdown files. All core ideas, model design, and analysis were developed and verified by the author.
+Claude Code was used to assist with code structuring, debugging, and writing markdown files. All core ideas, model design, and analysis were developed and verified by the author.

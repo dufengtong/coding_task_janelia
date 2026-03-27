@@ -51,7 +51,7 @@ The kidney query vector applied directly to a liver slice still highlights mitoc
 
 **Q3: Multiple queries**
 
-With N query mitochondria, all query vectors are averaged into a single pooled vector before computing the similarity map. This suppresses instance-specific noise and retains only the shared structural signature. In practice, the pooled result is not substantially better than a single query, possibly due to variability in the selected instances. A potential improvement is to compute a separate similarity map for each query and select the best scoring one, which is more computationally intensive but better handles morphological diversity within the query set. This can be further visualized by comparing the individual similarity maps across queries, which reveals the variability and consistency of the retrieved regions.
+With N query mitochondria, all query vectors are averaged into a single pooled vector before computing the similarity map. This suppresses instance-specific noise and retains only the shared structural signature. In practice, the pooled result is not substantially better than a single query, possibly due to variability in the selected instances. A potential improvement is to compute a separate similarity map for each query and select the best scoring one, which is more computationally intensive but better handles diversity within the query set. This can be further visualized by comparing the individual similarity maps across queries, which reveals the variability and consistency of the retrieved regions.
 
 See [task3_retrieval/README.md](task3_retrieval/README.md) for all similarity maps and score distributions.
 

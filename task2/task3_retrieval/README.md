@@ -39,8 +39,8 @@ $$\text{sim}(y,x) = \frac{\mathbf{d}_{y,x}^\top \mathbf{q}}{\|\mathbf{d}_{y,x}\|
 
 | | Layer 9 | Layer 12 |
 |---|---|---|
-| **Full slice** | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale1_layer9.png" width="100%"> | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale1_layer12.png" width="100%"> |
-| **Cropped** | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale1_layer9.png" width="100%"> | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale1_layer12.png" width="100%"> |
+| **Full slice** | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale1_layer9.png" width="100%"> | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale1_layer12.png" width="100%"> |
+| **Cropped** | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale1_layer9.png" width="100%"> | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale1_layer12.png" width="100%"> |
 
 **Score distributions (mito vs background):**
 
@@ -58,8 +58,8 @@ Input upsampled 2× increases the patch grid from ~14×14 to ~28×28, giving fin
 
 | | Layer 3 | Layer 6 | Layer 9 | Layer 12 |
 |---|---|---|---|---|
-| **Full slice** | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale2_layer3.png" width="200"> | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale2_layer6.png" width="200"> | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale2_layer9.png" width="200"> | <img src="../outputs/task3/task3_corr_mito286777_slice6_jrc_mus-kidney_imagescale2_layer12.png" width="200"> |
-| **Cropped** | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer3.png" width="200"> | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer6.png" width="200"> | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer9.png" width="200"> | <img src="../outputs/task3/task3_corr_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer12.png" width="200"> |
+| **Full slice** | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale2_layer3.png" width="200"> | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale2_layer6.png" width="200"> | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale2_layer9.png" width="200"> | <img src="../outputs/task3/task3_sim_mito286777_slice6_jrc_mus-kidney_imagescale2_layer12.png" width="200"> |
+| **Cropped** | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer3.png" width="200"> | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer6.png" width="200"> | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer9.png" width="200"> | <img src="../outputs/task3/task3_sim_crop_mito286777_slice6_jrc_mus-kidney_imagescale2_layer12.png" width="200"> |
 
 **Score distributions:**
 
@@ -84,7 +84,7 @@ The query vector from **kidney mito 286777** (slice 6, layer 9, scale 2×) is ap
 
 | Full slice | Cropped |
 |---|---|
-| <img src="../outputs/task3/task3_corr_query-jrc_mus-kidney_mito286777_slice6_target-jrc_mus-liver_slice5_layer9.png" width="100%"> | <img src="../outputs/task3/task3_corr_crop_query-jrc_mus-kidney_mito286777_slice6_target-jrc_mus-liver_slice5_layer9.png" width="90%"> |
+| <img src="../outputs/task3/task3_sim_query-jrc_mus-kidney_mito286777_slice6_target-jrc_mus-liver_slice5_layer9.png" width="100%"> | <img src="../outputs/task3/task3_sim_crop_query-jrc_mus-kidney_mito286777_slice6_target-jrc_mus-liver_slice5_layer9.png" width="90%"> |
 
 **Score distribution:**
 
@@ -106,7 +106,7 @@ The pooled vector is L2-normalised before computing the similarity map, as befor
 
 | Full slice | Cropped |
 |---|---|
-| <img src="../outputs/task3/task3_multi_corr_query-jrc_mus-kidney_N10_slice6_layer9.png" width="100%"> | <img src="../outputs/task3/task3_multi_corr_crop_query-jrc_mus-kidney_N10_slice6_layer9.png" width="85%"> |
+| <img src="../outputs/task3/task3_multi_sim_query-jrc_mus-kidney_N10_slice6_layer9.png" width="100%"> | <img src="../outputs/task3/task3_multi_sim_crop_query-jrc_mus-kidney_N10_slice6_layer9.png" width="85%"> |
 
 <img src="../outputs/task3/task3_multi_hist_query-jrc_mus-kidney_N10_slice6_layer9.png" width="60%">
 
@@ -114,7 +114,7 @@ The pooled vector is L2-normalised before computing the similarity map, as befor
 
 | Full slice | Cropped |
 |---|---|
-| <img src="../outputs/task3/task3_multi_corr_query-jrc_mus-kidney_N10_slice6_target-jrc_mus-liver_slice5_layer9.png" width="100%"> | <img src="../outputs/task3/task3_multi_corr_crop_query-jrc_mus-kidney_N10_slice6_target-jrc_mus-liver_slice5_layer9.png" width="90%"> |
+| <img src="../outputs/task3/task3_multi_sim_query-jrc_mus-kidney_N10_slice6_target-jrc_mus-liver_slice5_layer9.png" width="100%"> | <img src="../outputs/task3/task3_multi_sim_crop_query-jrc_mus-kidney_N10_slice6_target-jrc_mus-liver_slice5_layer9.png" width="90%"> |
 
 <img src="../outputs/task3/task3_multi_hist_query-jrc_mus-kidney_N10_slice6_target-jrc_mus-liver_slice5_layer9.png" width="60%">
 
